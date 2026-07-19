@@ -2,7 +2,7 @@
 
 An interactive, animated personal portfolio website built with React, Three.js, and React Three Fiber. Featuring a fully rigged 3D computer model that displays live project preview videos on its screen, smooth GSAP-powered animations, and a responsive, modern UI.
 
-🔗 **Live site:** [add your deployed link here]
+🔗 **Live site:** https://portfolio-fifi-nc5fdq2x8-fadwa-aitbaalis-projects.vercel.app/
 🔗 **Repo:** https://github.com/fadwabaali/portfolio_fifi
 
 ---
@@ -111,13 +111,6 @@ Get these from your [EmailJS](https://www.emailjs.com/) dashboard so the contact
 | `npm run build` | Build for production |
 | `npm run preview` | Preview the production build locally |
 | `npm run lint` | Run ESLint |
-
-## Roadmap
-
-- [ ] Add more freelance project case studies
-- [ ] Improve mobile 3D performance further
-- [ ] Add dark/light theme toggle
-- [ ] Deploy and link live demo above
 
 ## Author
 
