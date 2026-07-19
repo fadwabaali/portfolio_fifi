@@ -1,108 +1,99 @@
-<div align="center">
-  <br />
-    <a href="https://www.youtube.com/watch?v=E-fdPfRxkzQ" target="_blank">
-      <img src="public/images/readme.png" alt="Project Banner">
-    </a>
-  <br />
+# 💻 Fifi's Portfolio — Interactive 3D Developer Portfolio
 
-  <div>
-    <img src="https://img.shields.io/badge/-Three.js-black?style=for-the-badge&logo=three.js&logoColor=white" />
-    <img src="https://img.shields.io/badge/-GSAP-88CE02?style=for-the-badge&logo=greensock&logoColor=white" />
-    <img src="https://img.shields.io/badge/-Tailwind_CSS-38B2AC?style=for-the-badge&logo=tailwind-css&logoColor=white" />
-  </div>
+An interactive, animated personal portfolio website built with React, Three.js, and React Three Fiber. Featuring a fully rigged 3D computer model that displays live project preview videos on its screen, smooth GSAP-powered animations, and a responsive, modern UI.
 
-  <h3 align="center">Interactive 3D Portfolio Website</h3>
+🔗 **Live site:** [add your deployed link here]
+🔗 **Repo:** https://github.com/fadwabaali/portfolio_fifi
 
-   <div align="center">
-     Build this project step by step with our detailed tutorial on <a href="https://www.youtube.com/@javascriptmastery/videos" target="_blank"><b>JavaScript Mastery</b></a> YouTube. Join the JSM family!
-    </div>
-</div>
+---
 
-## 📋 <a name="table">Table of Contents</a>
+## 📋 Table of Contents
 
-1. 🤖 [Introduction](#introduction)
-2. ⚙️ [Tech Stack](#tech-stack)
-3. 🔋 [Features](#features)
-4. 🤸 [Quick Start](#quick-start)
-5. 🔗 [Assets & Snippets](#links)
-6. 🚀 [More](#more)
+1. [Overview](#overview)
+2. [Features](#features)
+3. [Tech Stack](#tech-stack)
+4. [Project Structure](#project-structure)
+5. [Getting Started](#getting-started)
+6. [Environment Variables](#environment-variables)
+7. [Available Scripts](#available-scripts)
+8. [Roadmap](#roadmap)
+9. [Author](#author)
 
-## ⚠️ Tutorial
+---
 
-This repository contains the code corresponding to an in-depth tutorial available on our YouTube channel, <a href="https://www.youtube.com/@javascriptmastery/videos" target="_blank"><b>JavaScript Mastery</b></a>.
+## Overview
 
-If you prefer visual learning, this is the perfect resource for you. Follow our tutorial to learn how to build projects like these step-by-step in a beginner-friendly manner!
+This portfolio showcases my work as a full-stack developer through an immersive 3D experience rather than a static page. The centerpiece is a custom 3D computer model (GLTF) whose monitor screen dynamically plays a video preview of each featured project as you browse — built with `@react-three/fiber`, `drei`, and a hand-tuned video-texture / UV-mapping pipeline to get the "cover fit" look right on a baked texture atlas.
 
-<a href="https://www.youtube.com/watch?v=E-fdPfRxkzQ" target="_blank"><img src="https://github.com/sujatagunale/EasyRead/assets/151519281/1736fca5-a031-4854-8c09-bc110e3bc16d" /></a>
+## Features
 
-## <a name="introduction">🤖 Introduction</a>
+- 🖥️ **3D computer showcase** — project videos render live on the monitor mesh using `THREE.VideoTexture`, with cover-fit scaling so videos fill the screen without distortion
+- 🎞️ **Project carousel** — cycle through projects with animated transitions (GSAP)
+- 🌀 **Scroll & reveal animations** powered by GSAP
+- 🎨 **Responsive design** with Tailwind CSS
+- ⚡ **Fast dev/build** via Vite
+- 📱 **Mobile-optimized** 3D rendering with fallback loading states
+- 📬 **Contact section** wired up with EmailJS
 
-The 3D Portfolio project is a highly engaging personal website that features animated 3D scenes, smooth camera transitions, interactive model showcases, and responsive design. It’s ideal for developers, designers, or freelancers looking to stand out in the digital crowd.
+## Tech Stack
 
-If you're getting started and need assistance or face any bugs, join our active Discord community with over **50k+** members. It's a place where people help each other out.
+| Category | Tech |
+|---|---|
+| Framework | React 19 |
+| 3D | Three.js, React Three Fiber, @react-three/drei |
+| Animation | GSAP (`@gsap/react`) |
+| Styling | Tailwind CSS |
+| Build tool | Vite |
+| Contact form | EmailJS |
+| Language | JavaScript (JSX) |
 
-<a href="https://discord.com/invite/n6EdbFJ" target="_blank"><img src="https://github.com/sujatagunale/EasyRead/assets/151519281/618f4872-1e10-42da-8213-1d69e486d02e" /></a>
+## Project Structure
 
-## <a name="tech-stack">⚙️ Tech Stack</a>
-
-- Three.js
-- React Three Fiber
-- Drei
-- GSAP
-- Tailwind CSS
-- Vite
-- React 19
-
-## <a name="features">🔋 Features</a>
-
-### Features of the 3D Portfolio Project
-
-👉 Animated 3D models and reveal animations
-
-👉 Realistic lighting and shadows
-
-👉 GSAP-powered scroll interactions
-
-👉 Responsive design with Tailwind CSS and Flexbox/Grid
-
-👉 Micro Interactions
-
-👉 Multi-section layout (About, Projects, Contact)
-
-👉 Mobile optimized 3D experience
-
-and many more, including code architecture and reusability.
-
-## <a name="quick-start">🤸 Quick Start</a>
-
-Follow these steps to set up the project locally on your machine.
-
-**Prerequisites**
-
-Make sure you have the following installed on your machine:
-
-- [Git](https://git-scm.com/)
-- [Node.js](https://nodejs.org/en)
-- [npm](https://www.npmjs.com/) (Node Package Manager)
-
-**Cloning the Repository**
-
-```bash
-git clone https://github.com/adrianhajdin/3d-portfolio.git
-cd 3d-portfolio
+```
+portfolio_fifi/
+├── public/
+│   ├── models/          # GLTF/GLB 3D models (e.g. computer.glb)
+│   ├── textures/         # Project preview videos/images
+│   └── images/
+├── src/
+│   ├── components/       # Reusable components (DemoComputer, Loading, etc.)
+│   ├── sections/          # Page sections (Hero, Projects, About, Contact)
+│   ├── constants/         # Project data, nav links, etc.
+│   └── App.jsx
+├── index.html
+├── vite.config.js
+└── package.json
 ```
 
-**Installation**
+> Note: adjust this tree to match your actual folder names if they differ.
 
-Install the project dependencies using npm:
+## Getting Started
+
+### Prerequisites
+
+- [Node.js](https://nodejs.org/) (v18+ recommended)
+- npm (comes with Node.js)
+- [Git](https://git-scm.com/)
+
+### Installation
 
 ```bash
+git clone https://github.com/fadwabaali/portfolio_fifi.git
+cd portfolio_fifi
 npm install
 ```
 
-**Set Up Environment Variables**
+### Run locally
 
-Create a new file named `.env` in the root of your project and add the following content:
+```bash
+npm run dev
+```
+
+Then open [http://localhost:5173](http://localhost:5173) in your browser.
+
+## Environment Variables
+
+Create a `.env` file in the project root:
 
 ```env
 VITE_APP_EMAILJS_SERVICE_ID=
@@ -110,33 +101,30 @@ VITE_APP_EMAILJS_TEMPLATE_ID=
 VITE_APP_EMAILJS_PUBLIC_KEY=
 ```
 
-Replace the placeholder values with your actual **[EmailJS](https://www.emailjs.com/)** credentials.
+Get these from your [EmailJS](https://www.emailjs.com/) dashboard so the contact form can send messages.
 
-**Running the Project**
+## Available Scripts
 
-```bash
-npm run dev
-```
+| Command | Description |
+|---|---|
+| `npm run dev` | Start the local dev server |
+| `npm run build` | Build for production |
+| `npm run preview` | Preview the production build locally |
+| `npm run lint` | Run ESLint |
 
-Open [http://localhost:5173](http://localhost:5173/) in your browser to view the project.
+## Roadmap
 
+- [ ] Add more freelance project case studies
+- [ ] Improve mobile 3D performance further
+- [ ] Add dark/light theme toggle
+- [ ] Deploy and link live demo above
 
-## <a name="links">🔗 Assets and Snippets</a>
+## Author
 
-Assets and snippets used in the project can be found in the **[video kit](https://jsm.dev/pfolio25-kit)**.
+**Fifi (Fadwa Baali)**
+Full-stack developer (JavaScript & Python) · Student at FSBM Hassan II
+📫 Reach out via the contact form on the site, or connect on GitHub: [@fadwabaali](https://github.com/fadwabaali)
 
-<a href="https://jsm.dev/pfolio25-kit" target="_blank">
-  <img src="public/images/readme-video-kit.png" alt="Video Kit Banner">
-</a>
+---
 
-
-## <a name="more">🚀 More</a>
-
-**Advance your skills with JSM Pro Courses**
-
-Enjoyed creating this project? Dive deeper into our PRO courses for a richer learning adventure. They're packed with
-detailed explanations, cool features, and exercises to boost your skills. Give it a go!
-
-<a href="https://beta.jsmastery.pro/" target="_blank">
-  <img src="public/images/readme-bottom.png" alt="Project Banner">
-</a>
+*Built on top of a 3D portfolio foundation, customized with original 3D screen video-texture logic, project content, and design tweaks.*
